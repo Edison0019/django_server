@@ -1,0 +1,1 @@
+This is for following a tutorial about using python and django for creating web servers
