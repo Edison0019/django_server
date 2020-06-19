@@ -3,4 +3,15 @@
 {% block content %}
 <h1>this is the content page</h1>
 <p>this is some important info</p>
+<p>{{my_text}}, {{my_number}},{{my_list}}</p>
+<ul>
+{% for element in my_list %}
+    {% if  element == 2222%}
+    <li>{{forloop.counter}} - {{element|add:33}}</li>
+    {% else %}
+    <li>{{forloop.counter}} - {{element}}</li>
+    {% endif %}
+{% endfor %}
+</ul>
+
 {% endblock content %}

@@ -12,7 +12,13 @@ def main_page(request,*args,**kwards):
     return render(request,'about.html',{})
 
 def content_page(request,*args,**kwards):
-    return render(request,'content.html',{})
+    my_content = {
+        "my_text" : "this is about us",
+        "this_is_true" : True,
+        "my_number" : 5,
+        "my_list" : [1111,2222,3333,4444,5555,6666,'wefg']
+    }
+    return render(request,'content.html',my_content)
 
 def content_base(request,*args,**kwards):
     return render(request,'base.html',{})
