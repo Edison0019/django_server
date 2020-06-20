@@ -5,4 +5,4 @@ class products(models.Model):
     description = models.TextField(blank=True,null=True)
     price = models.DecimalField(decimal_places=2,max_digits=10000)
     summary = models.TextField(default='this is the default message')
-    featured = models.BooleanField()
+    featured = models.BooleanField(default=True)
